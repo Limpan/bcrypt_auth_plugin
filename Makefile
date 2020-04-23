@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=
 
-build: src/auth_bcrypt.c src/blowfish/bcrypt.c src/blowfish/blf.c
+lib/auth_bcrypt.so: src/auth_bcrypt.c src/blowfish/bcrypt.c src/blowfish/blf.c
 	$(CC) -o lib/auth_bcrypt.so src/auth_bcrypt.c src/blowfish/bcrypt.c src/blowfish/blf.c `mysql_config --cflags` -shared -fPIC -lbsd
 
 debug: src/auth_bcrypt.c src/blowfish/bcrypt.c src/blowfish/blf.c
