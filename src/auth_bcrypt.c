@@ -33,7 +33,7 @@ static int bcrypt_hash_verify(MYSQL_PLUGIN_VIO *vio, MYSQL_SERVER_AUTH_INFO *inf
 static struct st_mysql_auth bcrypt_info =
 {
   MYSQL_AUTHENTICATION_INTERFACE_VERSION,
-  "dialog",
+  "mysql_clear_password",
   bcrypt_hash_verify
 };
 
