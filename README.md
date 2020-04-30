@@ -13,3 +13,5 @@ The following command adds an user that authenticates with the plugin.
 ```sql
 CREATE USER <name>@'localhost' IDENTIFIED WITH bcrypt USING '<hash>';
 ```
+## Secure connections
+Make sure to secure database connections with TLS since passwords are sent in clear text!
